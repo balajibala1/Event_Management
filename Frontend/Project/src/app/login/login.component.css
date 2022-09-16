@@ -1,0 +1,47 @@
+#Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    width:  700px;
+    position: relative;left: 100px;top: 15px;
+}
+.form{
+    position: relative;left: -300px;
+    color: white;
+}
+.nav{
+    display: flex;
+    margin-left: 456px;
+    background-color:rgb(3, 29, 72);
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: 399px;
+    
+
+}
+.home{
+    color: aliceblue;
+    position: relative;left: 50px;
+    
+}
+.reg{
+    color: aliceblue;
+    position: relative;left: 50px;
+}
+.cate{
+    color: aliceblue;
+
+}
+.sp{
+    position: relative;right: 40px;left: -50px;
+    font-size: large ;
+    color: aliceblue;
+}
+a:link{
+    text-decoration: none;
+}
+.span{
+    color: red;
+}

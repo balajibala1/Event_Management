@@ -1,0 +1,50 @@
+<body>
+    <div class="content">
+      <form (ngSubmit)="onSubmit()" [formGroup]="editTheme">
+        <h3> EditTheme </h3>
+        <table>
+        <div class="theme">
+          <tr>
+          <div class="form-group">
+            <input type="text" required
+            placeholder="Enter theme Name" id="theme_name"
+            [(ngModel)]="theme.themeName" formControlName="themeName"><br>
+            <span class="text-danger"
+            *ngIf="editTheme.get('themeName')?.invalid && editTheme.get('themeName')?.touched">
+            Theme Name is required:
+          </span> 
+          </div>
+          <br>
+
+        <div class="form-group">
+            <input type="number" placeholder="Enter theme_cost" 
+            id="theme_cost"  required
+            [(ngModel)]="theme.theme_cost" formControlName="theme_cost" ><br>
+            <span class="text-danger"
+            *ngIf="editTheme.get('theme_cost')?.invalid && editTheme.get('theme_cost')?.touched">
+            Theme price details is required:
+          </span> 
+          </div>
+          <br>
+
+          
+
+          <div class="form-group" >
+            <input type="text" placeholder="Enter the location"  
+            required id="location"  required
+            [(ngModel)]="theme.location"  formControlName="location"><br>
+            <span class="text-danger"
+            *ngIf="editTheme.get('location')?.invalid && editTheme.get('location')?.touched">
+           Location is required
+          </span> 
+          </div>
+          <br>
+        
+         <button mat-stroked-button color="primary" class="btn btn-success" id="editTheme" [disabled]="!editTheme.valid" type="submit">Add Theme</button>
+        </tr>
+      </div>
+      </table>
+        
+    </form>
+  </div>
+</body>

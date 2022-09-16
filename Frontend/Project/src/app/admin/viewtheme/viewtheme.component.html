@@ -1,0 +1,32 @@
+<app-admin></app-admin>
+<br>
+<button  class="btn btn-success" routerLink="/admin/addtheme">Add-Theme</button><br>
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ThemeName</th>
+        <th scope="col">Price</th>
+        <th scope="col">Location</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let theme of themedetails">
+        <td>{{theme.themeName}}</td>
+        <td>{{theme.theme_cost}}</td>
+        <td>{{theme.location}}</td>
+        <td><button type="button"  (click)="editTheme(theme.theme_id)" class="btn btn-primary" >Edit</button></td>
+        <td><button type="button"  (click)="deleteTheme(theme.theme_id)" class="btn btn-danger" >Delete</button></td>
+      </tr>
+    
+     
+    </tbody>
+  </table>
+
+  
+
+

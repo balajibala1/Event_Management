@@ -1,0 +1,39 @@
+<app-user></app-user>
+<body>
+    <div class="content">
+      <form (ngSubmit)="onSubmit()" [formGroup]="bookForm">
+        <h3> Book </h3>
+        <table>
+        <div class="book">
+          <tr>
+          <div class="form-group">
+            <label>Select the events</label><br>
+            <select style="width:190px;" [(ngModel)]="book.event_name" formControlName="event_name" required>
+                <option *ngFor="let theme of themedetails" [value]="theme.themeName">{{theme.themeName}}</option>
+                <span  class="text-danger" *ngIf="bookForm.get('event_name')?.touched && bookForm.get('event_name')?.invalid"></span>
+
+            </select>
+            <br>
+          </div>
+          <br>
+
+        <div class="form-group">
+            <input type="number" placeholder="Enter no_of_persons" 
+            id="no_of_persons"  required
+            [(ngModel)]="book.no_of_persons" formControlName="no_of_persons"><br>
+            <span class="text-danger" *ngIf="bookForm.get('no_of_persons').touched && bookForm.get('no_of_persons').invalid">Enter NoOfPersons</span>
+            <br>
+          </div>
+          
+         
+          
+        
+         <button mat-stroked-button color="primary" class="btn btn-danger" [disabled]="!bookForm.valid" type="submit">Add</button>
+        </tr>
+      </div>
+      </table>
+        
+    </form>
+  </div>
+</body>
+

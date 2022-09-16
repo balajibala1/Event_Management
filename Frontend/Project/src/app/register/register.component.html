@@ -1,0 +1,50 @@
+
+<div id="signup">
+      <img src="../assets/image/signup.jpeg" height="500px" width="400px">
+      <form class="form"  [formGroup]="signForm" (ngSubmit)="onSubmit()">
+  
+              <h2 class="register">Register</h2>
+  
+              <div>
+              <label >Username</label><br>
+              <input type="text" placeholder="Enter the FullName" [(ngModel)]="register.username" name="username" id="username" formControlName="username"><br>
+              <span class="text-danger" *ngIf="signForm.get('username').touched && signForm.get('username').invalid">Enter the username</span>
+            </div>
+  
+            <div>
+              <label>Mobilenumber:</label><br>
+              <input type="number"  
+              placeholder="Enter the Mobilenumber" [(ngModel)]="register.mobileNo"
+              name="mobileNo" id="mobileNo"
+              formControlName="mobileNo"><br>
+              <span class="text-danger" *ngIf="signForm.get('mobileNo').touched && signForm.get('mobileNo').invalid">Invalid Mobilenumber</span>
+            </div>
+  
+  
+          <div>
+              <label for="email">EmailId:</label><br>
+              <input type="email"
+              placeholder="Enter the EmailId" [(ngModel)]="register.emailId"
+              name="emailId"
+              id="emailId"
+              formControlName="emailId"><br>
+              <span class="text-danger" *ngIf="signForm.get('emailId').touched && signForm.get('emailId').invalid">Invalid Emailid</span>
+          </div>
+  
+  
+          <div>
+              <label for="password">Password:</label><br>
+              <input type="password"  
+              placeholder="Enter the password" [(ngModel)]="register.password"
+              name="password"
+              id="password"
+              formControlName="password"><br>
+              <span class="text-danger" *ngIf="signForm.get('password').touched && signForm.get('password').invalid">Invalid Password</span>
+            </div>
+            <br>
+           <button type="submit" [disabled]="!signForm.valid">Submit</button>
+           
+          </form>
+             
+   </div>
+   

@@ -1,0 +1,44 @@
+#signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 395px;
+    width:  710px;
+    position: relative;top: 15px;
+}
+.register{
+    color: aliceblue;
+}
+.form{
+    position: relative;right: 200px;
+}
+#nav{
+    display: flex;
+    background-color: rgb(141, 18, 102);
+    color: aliceblue;
+    padding: 8px;
+    width: 395px;
+    margin-left: 458px;
+
+}
+a:link{
+    text-decoration: none;
+}
+.h{
+    position: relative;left: 100px;
+    color: aliceblue;
+   
+
+}
+.l{
+    position: relative;left: 120px; 
+    color:aliceblue;  
+}
+.span{
+    color: red;
+}
+.sp{
+    position: relative;right: 5px;
+    font-size: large ;
+    color: aliceblue;
+}

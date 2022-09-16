@@ -1,0 +1,28 @@
+<app-user></app-user>
+<div class="container-fluid" style="background-image: url(https://images.pexels.com/photos/961402/pexels-photo-961402.jpeg?auto=compress&cs=tinysrgb&w=1500);  width: 1250px;height: 600px;">
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">ThemeName</th>
+        <th scope="col">NoOfPersons</th>
+        <th scope="col">EventPrice</th>
+        <th scope="col">TotalPrice</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody  >
+      <tr *ngFor="let book of bookdetails" >
+        <td>{{book.event_name}}</td>
+        <td>{{book.no_of_persons}}</td>
+        <td>{{book.total}}</td>
+        <td>{{book.total*book.no_of_persons}}</td>
+
+        <td><button type="button"  (click)="deleteBook(book.book_id)" class="btn btn-danger" >Delete</button></td>
+      </tr>
+    
+     
+    </tbody>
+  </table>
+  
+
+  

@@ -1,0 +1,9 @@
+body{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: rgb(255, 196, 0);
+    width: 500px;
+    margin-left: 400px;
+    position: relative;top: 50px;
+}

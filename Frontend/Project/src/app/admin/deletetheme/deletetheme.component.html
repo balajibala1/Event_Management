@@ -1,0 +1,24 @@
+
+<div class="main">
+    <body>
+        <div class="form">
+        <form (ngSubmit) = "onSubmit()">
+          <h3>Are you sure deleting this item {{theme.themeName}} theme ??</h3>
+          <br>
+          <br>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+          <button  (click) = "deleteTheme(theme.theme_id)" class = "btn btn-info " id="delete" type ="submit"> Yes</button>
+          </div>
+          <div class="col">
+          <button (click) = "goToThemeList()" class = "btn btn-info" id="No"> No</button>
+          </div> 
+          </div>
+          </div>
+    
+    
+        </form>
+      </div>
+        </body>
+      </div>
